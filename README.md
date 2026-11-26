@@ -3,7 +3,7 @@
 Windows용 디스크 **관리·기록** 도구. NTFS MFT를 직접 읽어 드라이브 전체를 빠르게 스캔하고,
 무엇이 공간을 차지하는지(폴더·파일·프로그램·파일 나이)와 **언제 얼마나 늘었는지**를 기록해 보여 줍니다.
 
-버전 1.0.0 · Windows 10/11 x64 · 한국어
+버전 1.0.1 · Windows 10/11 x64 · 한국어
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/tree-dark.png">
@@ -14,10 +14,17 @@ Windows용 디스크 **관리·기록** 도구. NTFS MFT를 직접 읽어 드라
 
 ## 설치와 실행
 
-1. [Releases](https://github.com/tachens/recorDisk-release/releases/latest)에서 `recorDisk-1.0.0-win-x64.zip`을 내려받아 원하는 폴더에 풉니다.
-2. `recorDisk.exe`를 실행합니다. .NET 이 설치되어 있지 않아도 됩니다(런타임 포함, 약 63 MB).
-3. 처음 실행하면 Windows SmartScreen이 "알 수 없는 게시자" 경고를 띄울 수 있습니다(코드 서명 없음).
+1. [Releases](https://github.com/tachens/recorDisk-release/releases/latest)에서 `recorDisk-1.0.1-win-x64.zip`을 내려받습니다.
+2. zip을 **`C:\Program Files\recorDisk`** 폴더에 통째로 풉니다(폴더를 만들 때 관리자 확인 창이 뜹니다).
+   `recorDisk.exe` 옆의 DLL 파일들도 필요하니 exe만 따로 옮기지 마세요.
+3. 그 폴더의 `recorDisk.exe`를 실행합니다. 자주 쓰면 마우스 오른쪽 단추 → '시작 화면에 고정'.
+   .NET 이 설치되어 있지 않아도 됩니다(런타임 포함).
+4. 처음 실행하면 Windows SmartScreen이 "알 수 없는 게시자" 경고를 띄울 수 있습니다(코드 서명 없음).
    "추가 정보 → 실행"을 누르면 됩니다.
+
+> **다운로드 폴더·바탕 화면 등에서는 실행되지 않습니다.** recorDisk는 관리자 권한으로 실행되는데,
+> 아무 프로그램이나 고칠 수 있는 폴더에 있으면 다른 프로그램이 파일을 바꿔치기해 관리자 권한을 얻을 수 있기 때문입니다.
+> 이런 위치에서 실행하면 안내 창이 뜨고 끝납니다. Program Files처럼 관리자만 고칠 수 있는 폴더에 두세요.
 
 - 고속(MFT) 스캔과 새로 고침은 관리자 권한이 필요해서, 기본 설정에서는 시작할 때 UAC 창이 뜹니다.
   설정 → '관리자 권한으로 실행'을 끄면 일반 권한(일반 스캔)으로 실행합니다.
